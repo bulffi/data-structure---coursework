@@ -76,8 +76,7 @@ bool Maze::find_way_out()
 			Point next_to_go;
 			next_to_go.row = curen_posi.row + directions[dire].row_pos;
 			next_to_go.col = curen_posi.col + directions[dire].col_pos;
-			if (ptr_maze[next_to_go.row][next_to_go.col] && (!ptr_have_been[next_to_go.
-row][next_to_go.col]))
+			if (ptr_maze[next_to_go.row][next_to_go.col] && (!ptr_have_been[next_to_go.row][next_to_go.col]))
 			{
 				way_out.emplace_back(next_to_go.row, next_to_go.col);
 				if (next_to_go.col == end.col&&next_to_go.row == end.row)
@@ -101,7 +100,7 @@ row][next_to_go.col]))
 
 istream& operator>>(istream&in, Maze& target)
 {
-	cout << "请问您的迷宫有几行几列（请先输入行数 再输入列数）" << endl;
+	cout << "请问您的迷宫有几行几列（请先输入行数再输入列数）" << endl;
 	int col;
 	int row;
 	cin >> row >> col;
@@ -132,8 +131,7 @@ istream& operator>>(istream&in, Maze& target)
 	}
 
 
-	cout << "
-输入您的迷宫时请注意，数字0代表不可经过，数字1代表可经过！请在相邻的两个数字之间插入一个空格！" << endl;	
+	cout << "输入您的迷宫时请注意，数字0代表不可经过，数字1代表可经过！请在相邻的两个数字之间插入一个空格！" << endl;	
 	for (int i = 1; i <= row; i++)
 	{
 		printf("请输入第%d行\n", i);
