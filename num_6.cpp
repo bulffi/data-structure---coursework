@@ -73,7 +73,10 @@ public:
 
 	}
 	
-	~Tree();
+	~Tree()
+	{
+		to_delete(root);
+	};
 
 private:
 	treeNode<T> *root = nullptr;
